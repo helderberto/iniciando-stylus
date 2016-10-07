@@ -1,2 +1,1 @@
-# stylus
-Iniciando com Stylus
+# Iniciando com Stylus

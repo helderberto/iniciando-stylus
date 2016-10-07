@@ -1,0 +1,33 @@
+make-media-queries-breakpoints()
+  for screen-width in screen-desktop-large screen-desktop screen-tablet screen-mobile
+    @media only screen and (max-width: screen-width)
+      if (screen-width == screen-desktop-large)
+        .container
+          width container-desktop
+      else if (screen-width == screen-desktop)
+        .container
+          width container-tablet
+      else if (screen-width == screen-tablet)
+        .container
+        .columns
+          width container-mobile !important
+
+make-row()
+  margin 0 (-(grid-gutter-width / 2))
+
+calc-container-padding()
+  padding 0 (grid-gutter-width / 2)
+
+make-columns()
+  for i in grid-columns..0
+    .col-{i}
+      width percentage(i, grid-columns)
+
+    .col-offset-{i}
+      margin-left percentage(i, grid-columns)
+
+percentage(index, divider)
+  if index == 0
+    0
+  else
+    unit((index * 100) / divider, "%")

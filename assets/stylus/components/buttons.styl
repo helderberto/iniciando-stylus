@@ -1,0 +1,63 @@
+.btn
+  font-weight bold
+  padding 15px 27px
+  border 1px solid transparent
+  display inline-block
+  cursor pointer
+  border-radius(5px)
+
+  &-info
+  &-primary
+  &-success
+  &-danger
+    color lighter
+
+  &-default
+    color darker
+    border-color gray-darker
+    background-color lighter
+
+  &-primary
+    background-color blue
+    border-color blue
+
+    &:hover
+    &:focus
+      background-color darken(blue, 20%)
+      border-color darken(blue, 20%)
+
+  &-info
+    background-color blue-lighter
+    border-color blue-lighter
+
+    &:hover
+    &:focus
+      background-color darken(blue-lighter, 20%)
+      border-color darken(blue-lighter, 20%)
+
+  &-warning
+    background-color yellow
+    border-color yellow
+
+    &:hover
+    &:focus
+      background-color darken(yellow, 20%)
+      border-color darken(yellow, 20%)
+
+  &-success
+    background-color green
+    border-color green
+
+    &:hover
+    &:focus
+      background-color darken(green, 20%)
+      border-color darken(green, 20%)
+
+  &-danger
+    background-color red
+    border-color red
+
+    &:hover
+    &:focus
+      background-color darken(red, 20%)
+      border-color darken(red, 20%)

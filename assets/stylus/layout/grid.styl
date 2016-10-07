@@ -1,0 +1,43 @@
+// Media Queries Breakpoints
+screen-desktop-large = 1200px
+screen-desktop = 992px
+screen-tablet = 768px
+screen-mobile = 480px
+
+// Grid System
+grid-columns = 12
+grid-gutter-width = 30px
+
+// Container Sizes
+container-desktop-large = 1170px
+container-desktop = 940px
+container-tablet = 720px
+container-mobile = 100%
+
+.container
+  width container-desktop-large
+  calc-container-padding()
+  margin 0 auto
+
+.row
+.columns
+  box-sizing border-box
+
+.row
+  make-row()
+
+  &:before
+  &:after
+    content " "
+    display table
+
+  &:after
+    clear both
+
+.columns
+  @extend .relative
+  @extend .pull-left
+  padding 0 (grid-gutter-width / 2)
+
+make-media-queries-breakpoints()
+make-columns()
